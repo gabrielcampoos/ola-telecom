@@ -14,7 +14,10 @@
 		"format": "npm run prettier:fix && npm run lint:fix"
 	},
 	"dependencies": {
+		"@emotion/styled": "^11.11.0",
+		"@mui/icons-material": "^5.14.18",
 		"@mui/material": "^5.14.17",
+		"@mui/styled-engine": "^5.14.18",
 		"@reduxjs/toolkit": "^1.9.5",
 		"@types/material-ui": "^0.21.12",
 		"@types/react-router-dom": "^5.3.3",

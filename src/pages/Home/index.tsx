@@ -1,28 +1,25 @@
-import Assinaturas from './components/Assinaturas';
-import CarouselDiv from './components/Carousel';
-import ComoChegar from './components/ComoChegar';
-import FloatingButton from './components/FloatingButton';
-import Footer from './components/Footer';
-import MockupApp from './components/MockupApp';
-import ButtonAppBar from './components/Navbar';
-import Planos from './components/Planos';
-import QuemSomos from './components/QuemSomos';
-import Servicos from './components/Servicos';
+import { Box } from '@mui/material';
+
+import Background from '../../assets/images/ola-telecom-bg.jpg';
+import Welcome from './components/Welcome';
 
 const Home = () => {
 	return (
-		<>
-			<ButtonAppBar />
-			<CarouselDiv />
-			<QuemSomos />
-			<Assinaturas />
-			<Planos />
-			<MockupApp />
-			<ComoChegar />
-			<Servicos />
-			<Footer />
-			<FloatingButton />
-		</>
+		<Box
+			width="100%"
+			height="100vh"
+			sx={{
+				backgroundImage: `url(${Background})`,
+				backgroundSize: 'cover',
+				backgroundPosition: 'center',
+				backgroundRepeat: 'no-repeat',
+			}}
+			display="flex"
+			justifyContent="center"
+			alignItems="center"
+		>
+			<Welcome />
+		</Box>
 	);
 };
 

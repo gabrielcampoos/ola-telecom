@@ -1,12 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import Home from '../../pages/Home';
+import OlaTelecom from '../../pages/OlaTelecom';
 
 const AppRoutes: React.FC = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
-				{/* <Route path="/" element={<Home />} />
-				<Route path="/sobre" element={<NossaHistoria />} /> */}
+				<Route path="/" element={<Home />} />
+				<Route path="/ola-telecom" element={<OlaTelecom />} />
 			</Routes>
 		</BrowserRouter>
 	);

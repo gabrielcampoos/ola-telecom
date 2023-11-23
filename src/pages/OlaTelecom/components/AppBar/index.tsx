@@ -40,139 +40,151 @@ function ResponsiveAppBar() {
 	};
 
 	return (
-		<AppBar
-			position="static"
-			sx={{
-				backgroundColor: 'crimson',
-			}}
-		>
-			<Box width="80%">
-				<Container maxWidth="sm">
-					<Toolbar disableGutters>
-						<Typography
-							variant="h6"
-							noWrap
-							component="a"
-							href="#app-bar-with-responsive-menu"
-							sx={{
-								display: { xs: 'none', md: 'flex' },
-								fontFamily: 'monospace',
-								fontWeight: 700,
-								letterSpacing: '.3rem',
-								color: 'inherit',
-								textDecoration: 'none',
-							}}
+		<>
+			<AppBar
+				position="fixed"
+				sx={{
+					padding: '0.8rem 0',
+					backgroundColor: 'transparent',
+					borderBottom: '1px solid #FFFFFF73',
+				}}
+			>
+				<Box width="100%">
+					<Container maxWidth="md" sx={{ float: 'left' }}>
+						<Toolbar
+							disableGutters
+							sx={{ position: 'relative', left: '9rem' }}
 						>
-							<img src={logoBranco} width="80%" />
-						</Typography>
-
-						<Box
-							sx={{
-								flexGrow: 0,
-								display: { xs: 'flex', md: 'none' },
-							}}
-						>
-							<IconButton
-								size="large"
-								aria-label="account of current user"
-								aria-controls="menu-appbar"
-								aria-haspopup="true"
-								onClick={handleOpenNavMenu}
-								color="inherit"
-							>
-								<MenuIcon />
-							</IconButton>
-							<Menu
-								id="menu-appbar"
-								anchorEl={anchorElNav}
-								anchorOrigin={{
-									vertical: 'bottom',
-									horizontal: 'left',
-								}}
-								keepMounted
-								transformOrigin={{
-									vertical: 'top',
-									horizontal: 'left',
-								}}
-								open={Boolean(anchorElNav)}
-								onClose={handleCloseNavMenu}
+							<Typography
+								variant="h6"
+								noWrap
+								component="a"
+								href="#app-bar-with-responsive-menu"
+								position="relative"
+								left="5rem"
 								sx={{
-									display: { xs: 'block', md: 'none' },
+									display: { xs: 'none', md: 'flex' },
+									fontFamily: 'monospace',
+									fontWeight: 700,
+									letterSpacing: '.3rem',
+									color: 'inherit',
+									textDecoration: 'none',
+								}}
+							>
+								<img src={logoBranco} width="40%" />
+							</Typography>
+
+							<Box
+								sx={{
 									flexGrow: 0,
+									display: { xs: 'flex', md: 'none' },
+								}}
+							>
+								<IconButton
+									size="large"
+									aria-label="account of current user"
+									aria-controls="menu-appbar"
+									aria-haspopup="true"
+									onClick={handleOpenNavMenu}
+									color="inherit"
+								>
+									<MenuIcon />
+								</IconButton>
+								<Menu
+									id="menu-appbar"
+									anchorEl={anchorElNav}
+									anchorOrigin={{
+										vertical: 'bottom',
+										horizontal: 'left',
+									}}
+									keepMounted
+									transformOrigin={{
+										vertical: 'top',
+										horizontal: 'left',
+									}}
+									open={Boolean(anchorElNav)}
+									onClose={handleCloseNavMenu}
+									sx={{
+										display: { xs: 'block', md: 'none' },
+										flexGrow: 0,
+									}}
+								>
+									{pages.map((page) => (
+										<MenuItem
+											key={page}
+											onClick={handleCloseNavMenu}
+										>
+											<Typography textAlign="center">
+												{page}
+											</Typography>
+										</MenuItem>
+									))}
+								</Menu>
+							</Box>
+
+							<Typography
+								variant="h5"
+								noWrap
+								component="a"
+								href="#app-bar-with-responsive-menu"
+								sx={{
+									mr: 2,
+									display: { xs: 'flex', md: 'none' },
+									flexGrow: 0,
+									fontFamily: 'monospace',
+									fontWeight: 700,
+									letterSpacing: '.3rem',
+									color: 'inherit',
+									textDecoration: 'none',
+								}}
+							></Typography>
+							<Box
+								sx={{
+									flexGrow: 1,
+									display: { xs: 'none', md: 'flex' },
 								}}
 							>
 								{pages.map((page) => (
-									<MenuItem
+									<Button
 										key={page}
 										onClick={handleCloseNavMenu}
+										sx={{
+											my: 2,
+											color: 'white',
+											display: 'block',
+											padding: '0 20px',
+											fontSize: '0.8rem',
+										}}
 									>
-										<Typography textAlign="center">
-											{page}
-										</Typography>
-									</MenuItem>
+										{page}
+									</Button>
 								))}
-							</Menu>
-						</Box>
+							</Box>
 
-						<Typography
-							variant="h5"
-							noWrap
-							component="a"
-							href="#app-bar-with-responsive-menu"
-							sx={{
-								mr: 2,
-								display: { xs: 'flex', md: 'none' },
-								flexGrow: 0,
-								fontFamily: 'monospace',
-								fontWeight: 700,
-								letterSpacing: '.3rem',
-								color: 'inherit',
-								textDecoration: 'none',
-							}}
-						></Typography>
-						<Box
-							sx={{
-								flexGrow: 1,
-								display: { xs: 'none', md: 'flex' },
-							}}
-						>
-							{pages.map((page) => (
-								<Button
-									key={page}
-									onClick={handleCloseNavMenu}
-									sx={{
-										my: 2,
-										color: 'white',
-										display: 'block',
-										padding: '0 20px',
-									}}
-								>
-									{page}
-								</Button>
-							))}
-						</Box>
-
-						<Box sx={{ flexGrow: 0 }}>
-							<Tooltip title="Open settings">
-								<Button
-									fullWidth
-									onClick={() => ''}
-									sx={{
-										p: 1,
-										borderRadius: 5,
-										color: '#fff',
-										fontSize: '0.7rem',
-										background: '#1DA2C1',
-									}}
-								>
-									Central do Assinante
-								</Button>
-							</Tooltip>
-						</Box>
-					</Toolbar>
-				</Container>
-			</Box>
-		</AppBar>
+							<Box sx={{ flexGrow: 0 }}>
+								<Tooltip title="Open settings">
+									<Button
+										fullWidth
+										onClick={() => ''}
+										sx={{
+											position: 'relative',
+											right: '6rem',
+											p: 2,
+											borderRadius: 8,
+											color: '#fff',
+											fontSize: '0.8rem',
+											background: '#1DA2C1',
+										}}
+									>
+										Central do Assinante
+									</Button>
+								</Tooltip>
+							</Box>
+						</Toolbar>
+					</Container>
+				</Box>
+			</AppBar>
+		</>
 	);
 }
 export default ResponsiveAppBar;

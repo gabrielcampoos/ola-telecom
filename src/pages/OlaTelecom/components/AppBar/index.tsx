@@ -1,4 +1,5 @@
 import MenuIcon from '@mui/icons-material/Menu';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -50,10 +51,10 @@ function ResponsiveAppBar() {
 				}}
 			>
 				<Box width="100%">
-					<Container maxWidth="md" sx={{ float: 'left' }}>
+					<Container maxWidth="lg" sx={{ float: 'left' }}>
 						<Toolbar
 							disableGutters
-							sx={{ position: 'relative', left: '9rem' }}
+							sx={{ position: 'relative', left: '4rem' }}
 						>
 							<Typography
 								variant="h6"
@@ -154,6 +155,9 @@ function ResponsiveAppBar() {
 											display: 'block',
 											padding: '0 20px',
 											fontSize: '0.8rem',
+											'&:hover': {
+												color: '#0EC6E5',
+											},
 										}}
 									>
 										{page}
@@ -168,17 +172,31 @@ function ResponsiveAppBar() {
 										onClick={() => ''}
 										sx={{
 											position: 'relative',
-											right: '6rem',
 											p: 2,
 											borderRadius: 8,
+											right: '10rem',
 											color: '#fff',
 											fontSize: '0.8rem',
-											background: '#1DA2C1',
+											background: '#0EC6E5',
+											'&:hover': {
+												background: '#9C91DF',
+											},
 										}}
 									>
 										Central do Assinante
 									</Button>
 								</Tooltip>
+							</Box>
+							<Box width="20%" display="flex" alignItems="center">
+								<WhatsAppIcon fontSize="medium" />
+
+								<Typography
+									fontWeight="700"
+									fontSize="0.9rem"
+									pl={1}
+								>
+									(18) 3209-1200
+								</Typography>
 							</Box>
 						</Toolbar>
 					</Container>

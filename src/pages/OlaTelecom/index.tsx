@@ -1,11 +1,11 @@
 import ResponsiveAppBar from './components/AppBar';
-import Banner from './components/Banner';
+import Slider from './components/Slider';
 
 const OlaTelecom = () => {
 	return (
 		<>
 			<ResponsiveAppBar />
-			<Banner />
+			<Slider />
 		</>
 	);
 };

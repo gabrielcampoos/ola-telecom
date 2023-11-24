@@ -179,7 +179,7 @@ function ResponsiveAppBar() {
 											fontSize: '0.8rem',
 											background: '#0EC6E5',
 											'&:hover': {
-												background: '#9C91DF',
+												background: '#AD89E5',
 											},
 										}}
 									>

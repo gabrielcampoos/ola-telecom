@@ -1,4 +1,5 @@
 import ResponsiveAppBar from './components/AppBar';
+import GridInfo from './components/GridInfo';
 import Slider from './components/Slider';
 
 const OlaTelecom = () => {
@@ -6,6 +7,7 @@ const OlaTelecom = () => {
 		<>
 			<ResponsiveAppBar />
 			<Slider />
+			<GridInfo />
 		</>
 	);
 };

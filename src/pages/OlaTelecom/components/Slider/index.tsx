@@ -1,3 +1,4 @@
+/* eslint-disable import-helpers/order-imports */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -10,7 +11,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 // import required modules
-import { EffectFade, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 import Banner from '../Banner/part-1';
 import BannerPersona from '../Banner/part-2';
@@ -26,7 +27,10 @@ export default function Slider() {
 				pagination={{
 					clickable: true,
 				}}
-				modules={[EffectFade, Navigation, Pagination]}
+				autoplay={{
+					delay: 4000,
+				}}
+				modules={[EffectFade, Navigation, Pagination, Autoplay]}
 				className="mySwiper"
 			>
 				<SwiperSlide>{Banner}</SwiperSlide>

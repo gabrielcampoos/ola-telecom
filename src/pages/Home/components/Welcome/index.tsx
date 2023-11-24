@@ -1,8 +1,11 @@
 import { Button, Grid, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../../../assets/images/ola-telecom-logo.png';
 
 const Welcome = () => {
+	const navigate = useNavigate();
+
 	return (
 		<Grid
 			container
@@ -63,6 +66,7 @@ const Welcome = () => {
 							fontWeight: '700',
 						},
 					}}
+					onClick={() => navigate('/ola-telecom')}
 				>
 					Entrar
 				</Button>

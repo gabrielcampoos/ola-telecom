@@ -8,7 +8,7 @@ const GridInfo = () => {
 	return (
 		<Grid
 			container
-			spacing={{ xs: 2, md: 3 }}
+			spacing={{ xs: 2, md: 4 }}
 			columns={{ xs: 4, sm: 4, md: 12 }}
 			display="flex"
 			flexDirection="row"

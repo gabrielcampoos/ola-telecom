@@ -1,0 +1,30 @@
+.textAlternate {
+    visibility: hidden;
+}
+
+.textAlternate:hover {
+    animation: textVisible 1s ease-in-out both;
+}
+
+.backgroundAlternate:hover {
+    animation: backgroundBlack 2s ease-in-out both;
+}
+
+@keyframes textVisible{
+    0% {
+        visibility: hidden;
+    }
+    20%, 100% {
+        visibility: visible;
+    }
+
+    
+     
+}
+
+@keyframes backgroundBlack{
+    20%, 100% {
+        
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    }
+}

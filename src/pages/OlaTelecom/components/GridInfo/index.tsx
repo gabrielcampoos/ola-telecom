@@ -33,6 +33,7 @@ const GridInfo = () => {
 			>
 				<Grid
 					item
+					width="100%"
 					height="100%"
 					display="flex"
 					justifyContent="center"
@@ -43,19 +44,22 @@ const GridInfo = () => {
 						transform: 'translateX(0) ',
 						'.visible': {
 							visibility: 'hidden',
-							transform: 'translateY(-50px)',
 						},
 						'&:hover': {
-							transform:
-								'translateX(10px) translateY(-50px) scale(1.2)',
+							transform: 'translateY(-30px) ',
 							'.visible': {
 								visibility: 'visible',
-								transform: 'translateY(30px) scale(0.8)',
+								transform: 'translateY(30px) ',
 							},
 						},
 					}}
 				>
-					<Typography fontSize="2rem" color="white" fontWeight="700">
+					<Typography
+						fontSize="1.8rem"
+						color="white"
+						fontWeight="700"
+						textAlign="center"
+					>
 						O Melhor Provedor
 					</Typography>
 					<Typography
@@ -63,9 +67,10 @@ const GridInfo = () => {
 						color="white"
 						component="p"
 						className="visible"
+						textAlign="center"
 					>
-						Assista a Filmes e Séries, jogue on-line e acesse <br />{' '}
-						suas redes sociais, tudo ao mesmo tempo e SEM LIMITES!
+						Assista Filmes, Séries, jogue e acesse <br /> suas redes
+						sociais, SEM LIMITES!
 					</Typography>
 				</Grid>
 			</Grid>
@@ -86,6 +91,7 @@ const GridInfo = () => {
 			>
 				<Grid
 					item
+					width="100%"
 					height="100%"
 					display="flex"
 					justifyContent="center"
@@ -96,19 +102,22 @@ const GridInfo = () => {
 						transform: 'translateX(0) ',
 						'.visible': {
 							visibility: 'hidden',
-							transform: 'translateY(-50px)',
 						},
 						'&:hover': {
-							transform:
-								'translateX(10px) translateY(-50px) scale(1.2)',
+							transform: 'translateY(-30px)',
 							'.visible': {
 								visibility: 'visible',
-								transform: 'translateY(30px) scale(0.8)',
+								transform: 'translateY(30px)',
 							},
 						},
 					}}
 				>
-					<Typography fontSize="2rem" color="white" fontWeight="700">
+					<Typography
+						fontSize="1.8rem"
+						color="white"
+						fontWeight="700"
+						textAlign="center"
+					>
 						O Melhor Atendimento
 					</Typography>
 					<Typography
@@ -116,6 +125,7 @@ const GridInfo = () => {
 						color="white"
 						component="p"
 						className="visible"
+						textAlign="center"
 					>
 						Uma equipe suportada com tecnologia <br />
 						multichannel preparada para atender todas as
@@ -140,6 +150,7 @@ const GridInfo = () => {
 			>
 				<Grid
 					item
+					width="100%"
 					height="100%"
 					display="flex"
 					justifyContent="center"
@@ -150,19 +161,22 @@ const GridInfo = () => {
 						transform: 'translateX(0) ',
 						'.visible': {
 							visibility: 'hidden',
-							transform: 'translateY(-50px)',
 						},
 						'&:hover': {
-							transform:
-								'translateX(10px) translateY(-50px) scale(1.2)',
+							transform: 'translateY(-30px)',
 							'.visible': {
 								visibility: 'visible',
-								transform: 'translateY(30px) scale(0.8)',
+								transform: 'translateY(30px)',
 							},
 						},
 					}}
 				>
-					<Typography fontSize="2rem" color="white" fontWeight="700">
+					<Typography
+						fontSize="1.8rem"
+						color="white"
+						fontWeight="700"
+						textAlign="center"
+					>
 						2a Via de seus Boletos
 					</Typography>
 					<Typography
@@ -170,6 +184,7 @@ const GridInfo = () => {
 						color="white"
 						component="p"
 						className="visible"
+						textAlign="center"
 					>
 						Baixe a segunda via do seu boleto para
 						<br />

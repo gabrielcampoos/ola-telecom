@@ -1,5 +1,5 @@
-import Blog from './Blog';
 import ResponsiveAppBar from './components/AppBar';
+import Blog from './components/Blog';
 import GridInfo from './components/GridInfo';
 import Plans from './components/Plans';
 import Slider from './components/Slider';

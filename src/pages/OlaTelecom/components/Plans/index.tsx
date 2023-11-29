@@ -1,151 +1,89 @@
-import CheckIcon from '@mui/icons-material/Check';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import './styles.css';
 
 import Fundo from '../../../../assets/images/fundo.jpg';
+import BasicCard from '../Card';
 
 const Plans = () => {
 	return (
-		<Box
-			width="100%"
+		<Grid
+			container
+			spacing={{ xs: 4, md: 3 }}
+			columns={{ xs: 1, sm: 8, md: 12 }}
 			pt={3}
 			pb={3}
 			sx={{
 				filter: 'drop-shadow(7px 7px 10px black)',
 			}}
 		>
-			<Box
-				width="100% "
-				height="120px"
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-				sx={{
-					background: '#294767',
-					filter: 'drop-shadow(5px 5px 10px white) ',
-				}}
-			>
-				<Typography
-					fontSize="2rem"
-					textAlign="center"
-					color="white"
-					fontWeight="700"
-					position="absolute"
-				>
-					CONHEÇA NOSSOS
-					<br />
-					PLANOS
-				</Typography>
-			</Box>
-			<Box
-				width="100%"
-				height="800px"
-				display="flex"
-				justifyContent="center"
-				alignItems="center"
-				sx={{
-					background: `url(${Fundo})`,
-					backgroundPosition: 'center',
-					backgroundSize: 'cover',
-					backgroundRepeat: 'no-repeat',
-					backgroundAttachment: 'fixed',
-				}}
-			>
-				<Grid
-					container
-					spacing={{ xs: 2, md: 4 }}
-					columns={{ xs: 4, sm: 4, md: 17 }}
+			<Grid item xs={12} sm={12} md={12}>
+				<Box
+					width="100% "
+					height="120px"
 					display="flex"
-					flexDirection="row"
-					justifyContent="space-evenly"
+					justifyContent="center"
 					alignItems="center"
+					sx={{
+						background: '#294767',
+						filter: 'drop-shadow(5px 5px 10px white) ',
+					}}
 				>
-					<Grid
-						xs={2}
-						md={2}
-						item
-						width="200px"
-						height="500px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						color="#fff"
+					<Typography
+						fontSize="2rem"
+						textAlign="center"
+						color="white"
 						fontWeight="700"
-						sx={{
-							background: 'rgb(250, 131, 0)',
-							borderRadius: 5,
-							filter: 'drop-shadow(20px 20px 20px black)',
-						}}
-						gap={4}
-						p={2}
+						position="absolute"
 					>
-						<Typography
-							sx={{
-								color: '#fff',
-								fontSize: '2rem',
-								width: '100%',
-								textAlign: 'center',
-								fontWeight: '700',
-								borderBottom: '1px solid #fff',
-							}}
-						>
-							50mb
-						</Typography>
-						<Typography>
-							R${' '}
-							<span
-								style={{ fontSize: '2rem', fontWeight: '700' }}
-							>
-								59,90
-								<br />
-							</span>
-							/mês
-						</Typography>
-						<Typography>
-							<CheckIcon />
-							50mb de download
-						</Typography>
-						<Typography>
-							<CheckIcon />
-							Ideal para dois dispositivos
-						</Typography>
-						<Typography>
-							<CheckIcon />
-							Ideal para uma TV
-						</Typography>
-						<Button
-							sx={{
-								width: '130px',
-								background: '#294767',
-								color: '#fff',
-								fontWeight: '700',
-								filter: 'drop-shadow(4px 4px 10px #FF7173) ',
-							}}
-						>
-							Eu quero!
-						</Button>
-					</Grid>
-
-					<Grid
-						xs={2}
-						md={2}
-						item
-						width="200px"
-						height="500px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						color="#fff"
-						fontWeight="700"
+						CONHEÇA NOSSOS
+						<br />
+						PLANOS
+					</Typography>
+				</Box>
+			</Grid>
+			<Grid
+				item
+				xs={3}
+				sm={2}
+				md={12}
+				width="100%"
+				display="flex"
+				justifyContent="space-around"
+				alignItems="center"
+				flexDirection="row"
+			>
+				<Box
+					sx={{
+						width: '100%',
+						background: `url(${Fundo})`,
+						backgroundPosition: 'center',
+						backgroundSize: 'cover',
+						backgroundRepeat: 'no-repeat',
+						backgroundAttachment: 'fixed',
+						display: 'flex',
+						justifyContent: 'space-around',
+						alignItems: 'center',
+						flexDirection: 'row',
+					}}
+				></Box>
+				<BasicCard />
+			</Grid>
+			{/* <Grid item xs={3} sm={2} md={3}>
+					<Container
 						sx={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							flexDirection: 'column',
+							color: '#fff',
+							fontWeight: '700',
+
 							background: 'rgb(250, 131, 0)',
 							borderRadius: 5,
 							filter: 'drop-shadow(20px 20px 20px black) ',
+
+							gap: 3,
 						}}
-						gap={4}
-						p={2}
 					>
 						<Typography
 							sx={{
@@ -182,7 +120,10 @@ const Plans = () => {
 						<Typography>
 							R${' '}
 							<span
-								style={{ fontSize: '2rem', fontWeight: '700' }}
+								style={{
+									fontSize: '2rem',
+									fontWeight: '700',
+								}}
 							>
 								79,90
 								<br />
@@ -212,27 +153,23 @@ const Plans = () => {
 						>
 							Eu quero!
 						</Button>
-					</Grid>
+					</Container>
+				</Grid>
 
-					<Grid
-						xs={2}
-						md={2}
-						item
-						width="200px"
-						height="500px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						color="#fff"
-						fontWeight="700"
+				<Grid item xs={3} sm={2} md={3}>
+					<Container
 						sx={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							flexDirection: 'column',
+							color: '#fff',
+							fontWeight: '700',
 							background: 'rgb(250, 131, 0)',
 							borderRadius: 5,
 							filter: 'drop-shadow(20px 20px 20px black) ',
+							gap: 3,
 						}}
-						gap={4}
-						p={2}
 					>
 						<Typography
 							sx={{
@@ -250,7 +187,10 @@ const Plans = () => {
 						<Typography>
 							R${' '}
 							<span
-								style={{ fontSize: '2rem', fontWeight: '700' }}
+								style={{
+									fontSize: '2rem',
+									fontWeight: '700',
+								}}
 							>
 								89,90
 								<br />
@@ -280,26 +220,23 @@ const Plans = () => {
 						>
 							Eu quero!
 						</Button>
-					</Grid>
-					<Grid
-						xs={2}
-						md={2}
-						item
-						width="200px"
-						height="500px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						color="#fff"
-						fontWeight="700"
+					</Container>
+				</Grid>
+
+				<Grid item xs={3} sm={2} md={3}>
+					<Container
 						sx={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							flexDirection: 'column',
+							color: '#fff',
+							fontWeight: '700',
 							background: 'rgb(250, 131, 0)',
 							borderRadius: 5,
 							filter: 'drop-shadow(20px 20px 20px black) ',
+							gap: 3,
 						}}
-						gap={4}
-						p={2}
 					>
 						<Typography
 							sx={{
@@ -317,7 +254,10 @@ const Plans = () => {
 						<Typography>
 							R${' '}
 							<span
-								style={{ fontSize: '2rem', fontWeight: '700' }}
+								style={{
+									fontSize: '2rem',
+									fontWeight: '700',
+								}}
 							>
 								99,90
 								<br />
@@ -347,25 +287,22 @@ const Plans = () => {
 						>
 							Eu quero!
 						</Button>
-					</Grid>
-					<Grid
-						xs={2}
-						md={2}
-						item
-						width="200px"
-						height="500px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						color="#fff"
-						fontWeight="700"
+					</Container>
+				</Grid>
+
+				<Grid item xs={3} sm={2} md={3}>
+					<Container
 						sx={{
+							display: 'flex',
+							justifyContent: 'center',
+							alignItems: 'center',
+							flexDirection: 'column',
+							color: '#fff',
+							fontWeight: '700',
 							background: 'rgb(250, 131, 0)',
 							borderRadius: 5,
+							gap: 3,
 						}}
-						gap={3}
-						p={2}
 					>
 						<Typography
 							sx={{
@@ -383,7 +320,10 @@ const Plans = () => {
 						<Typography>
 							R${' '}
 							<span
-								style={{ fontSize: '2rem', fontWeight: '700' }}
+								style={{
+									fontSize: '2rem',
+									fontWeight: '700',
+								}}
 							>
 								54,95
 								<br />
@@ -417,10 +357,9 @@ const Plans = () => {
 						>
 							Eu quero!
 						</Button>
-					</Grid>
-				</Grid>
-			</Box>
-		</Box>
+					</Container>
+				</Grid> */}
+		</Grid>
 	);
 };
 

@@ -1,8 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material';
 
-import Control from '../../../assets/images/control.jpg';
-import Fibra from '../../../assets/images/fibra.jpg';
-import Password from '../../../assets/images/password.jpeg';
+import Control from '../../../../assets/images/control.jpg';
+import Fibra from '../../../../assets/images/fibra.jpg';
+import Password from '../../../../assets/images/password.jpeg';
 import './styles.css';
 
 const Blog = () => {

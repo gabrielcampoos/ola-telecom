@@ -11,6 +11,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import logoBranco from '../../../../assets/images/ola-telecom-logo-branco.png';
 
@@ -39,6 +40,8 @@ function ResponsiveAppBar() {
 	const handleCloseUserMenu = () => {
 		setAnchorElUser(null);
 	};
+
+	const navigate = useNavigate();
 
 	return (
 		<>
@@ -148,7 +151,36 @@ function ResponsiveAppBar() {
 								{pages.map((page) => (
 									<Button
 										key={page}
-										onClick={handleCloseNavMenu}
+										onClick={() => {
+											handleCloseNavMenu;
+											if (page === 'Home') {
+												navigate('/ola-telecom');
+											}
+											if (page === 'Empresa') {
+												navigate(
+													'/ola-telecom-empresa',
+												);
+											}
+											if (page === 'Blog') {
+												const blog =
+													document.getElementById(
+														'blog',
+													);
+												blog?.scrollIntoView({
+													behavior: 'smooth',
+												});
+											}
+
+											if (page === 'Contato') {
+												const contato =
+													document.getElementById(
+														'contato',
+													);
+												contato?.scrollIntoView({
+													behavior: 'smooth',
+												});
+											}
+										}}
 										sx={{
 											my: 2,
 											color: 'white',

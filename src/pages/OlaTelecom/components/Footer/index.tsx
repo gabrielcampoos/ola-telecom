@@ -2,12 +2,51 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import GoogleIcon from '@mui/icons-material/Google';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 import Logo from '../../../../assets/images/ola-telecom-logo-branco.png';
 
 const Footer = () => {
+	const navigate = useNavigate();
+
+	const handleScrollBlog = () => {
+		const url = window.location.href;
+
+		const blog = document.getElementById('blog');
+
+		if (url !== '/ola-telecom') {
+			navigate('/ola-telecom');
+		}
+
+		blog ? blog.scrollIntoView({ behavior: 'smooth' }) : blog;
+	};
+
+	const handleScrollContato = () => {
+		const url = window.location.href;
+
+		const contato = document.getElementById('contato');
+
+		if (url !== '/ola-telecom') {
+			navigate('/ola-telecom');
+		}
+
+		contato ? contato.scrollIntoView({ behavior: 'smooth' }) : contato;
+	};
+	const handleScrollEmpresa = () => {
+		const url = window.location.href;
+
+		const empresa = document.getElementById('empresa');
+
+		if (url !== '/ola-telecom') {
+			navigate('/ola-telecom');
+		}
+
+		empresa ? empresa.scrollIntoView({ behavior: 'smooth' }) : empresa;
+	};
+
 	return (
 		<Box
+			component="div"
 			width="100%"
 			height="100%"
 			p={5}
@@ -23,6 +62,7 @@ const Footer = () => {
 				display="flex"
 				justifyContent="space-evenly"
 				alignItems="start"
+				id="contato"
 			>
 				<Grid
 					item
@@ -42,6 +82,7 @@ const Footer = () => {
 						component="button"
 						variant="subtitle1"
 						color="#fff"
+						onClick={handleScrollBlog}
 						sx={{
 							background: 'transparent',
 							border: 'none',
@@ -59,6 +100,7 @@ const Footer = () => {
 							border: 'none',
 							cursor: 'pointer',
 						}}
+						onClick={handleScrollEmpresa}
 					>
 						QUEM SOMOS
 					</Typography>
@@ -66,6 +108,7 @@ const Footer = () => {
 						component="button"
 						variant="subtitle1"
 						color="#fff"
+						onClick={handleScrollContato}
 						sx={{
 							background: 'transparent',
 							border: 'none',

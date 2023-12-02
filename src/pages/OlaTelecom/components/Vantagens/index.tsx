@@ -5,6 +5,8 @@ import SpeedLogo from '../../../../assets/images/speed.png';
 const Vantagens = () => {
 	return (
 		<Box
+			component="div"
+			id="vantagens"
 			width="100%"
 			pb={10}
 			sx={{

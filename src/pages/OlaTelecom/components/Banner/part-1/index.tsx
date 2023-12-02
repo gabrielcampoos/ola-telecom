@@ -55,7 +55,6 @@ const Banner = () => {
 					</span>
 					<Box mt="4rem">
 						<Button
-							onClick={() => ''}
 							sx={{
 								width: '130px',
 								p: 1,
@@ -69,7 +68,12 @@ const Banner = () => {
 								},
 							}}
 						>
-							ASSINE JÁ!
+							<a
+								href="https://api.whatsapp.com/send?phone=551832091200&text=Oi!%20Eu%20quero%20assinar%20esse%20plano%20de%20150Mb"
+								style={{ textDecoration: 'none' }}
+							>
+								ASSINE JÁ!
+							</a>
 						</Button>
 					</Box>
 				</Box>

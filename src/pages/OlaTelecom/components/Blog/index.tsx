@@ -3,11 +3,18 @@ import { Box, Grid, Typography } from '@mui/material';
 import Control from '../../../../assets/images/control.jpg';
 import Fibra from '../../../../assets/images/fibra.jpg';
 import Password from '../../../../assets/images/password.jpeg';
+
+import { useRef } from 'react';
 import './styles.css';
 
 const Blog = () => {
+	const ref = useRef();
+
 	return (
 		<Box
+			component="div"
+			id="blog"
+			ref={ref}
 			width="100%"
 			height="675px"
 			sx={{

@@ -1,70 +1,108 @@
 {
 	"env": {
 		"browser": true,
-		"es2021": true
+		"es6": true,
+		"node": true
 	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:react/jsx-runtime",
-		"plugin:prettier/recommended",
-		"prettier"
-	],
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		},
-		"ecmaVersion": "latest",
-		"sourceType": "module"
+		"requireConfigFile": false,
+		"babelOptions": {
+			"presets": ["@babel/preset-react"]
+		}
 	},
+	"extends": [
+		"react-app",
+		"airbnb",
+		"plugin:prettier/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
 	"plugins": [
 		"react",
 		"@typescript-eslint",
-		"eslint-plugin-import-helpers",
 		"react-hooks",
-		"prettier"
+		"prettier",
+		"unused-imports"
 	],
-	"rules": {
-		"react/prop-types": "off",
-		"@typescript-eslint/no-explicit-any": "warn",
-		"@typescript-eslint/no-unused-vars": "warn",
-		"@typescript-eslint/naming-convention": [
-			"error",
-			{
-				"selector": ["interface", "typeLike"],
-				"format": ["PascalCase"]
-			}
-		],
-
-		"import-helpers/order-imports": [
-			"warn",
-			{
-				"newlinesBetween": "always",
-				"groups": [
-					"module",
-					"/^@shared/",
-					["parent", "sibling", "index"]
-				],
-				"alphabetize": {
-					"order": "asc",
-					"ignoreCase": true
-				}
-			}
-		],
-
-		"react-hooks/rules-of-hooks": "error",
-		"react-hooks/exhaustive-deps": "warn",
-
-		"prettier/prettier": ["warn"]
-	},
 	"settings": {
 		"import/resolver": {
+			"node": {
+				"paths": ["src"],
+				"extensions": [".js", ".jsx", ".ts", ".tsx"]
+			},
 			"typescript": {}
-		},
-		"react": {
-			"version": "detect"
 		}
+	},
+	"rules": {
+		// Prettier configs based on airbnb guide
+		"prettier/prettier": [
+			"warn",
+			{
+				"arrowParens": "always",
+				"bracketSpacing": true,
+				"jsxBracketSameLine": false,
+				"jsxSingleQuote": false,
+				"printWidth": 150,
+				"proseWrap": "always",
+				"quoteProps": "as-needed",
+				"semi": true,
+				"singleQuote": true,
+				"tabWidth": 2,
+				"trailingComma": "es5",
+				"useTabs": false,
+				"endOfLine": "auto"
+			}
+		],
+		"react/jsx-filename-extension": [
+			1,
+			{
+				"extensions": [".tsx", ".js", ".ts"]
+			}
+		],
+		"import/no-extraneous-dependencies": [
+			"warn",
+			{
+				"devDependencies": true
+			}
+		],
+		"import/extensions": [
+			"error",
+			"ignorePackages",
+			{
+				"ts": "never",
+				"tsx": "never",
+				"js": "never"
+			}
+		],
+		"no-unused-expressions": "off",
+		"no-unused-vars": "off",
+		"no-console": "off",
+		"@typescript-eslint/ban-ts-comment": "warn",
+		"@typescript-eslint/no-var-requires": 0,
+		"no-use-before-define": "off",
+		"no-underscore-dangle": "off",
+		"no-param-reassign": "off", // mutating redux state in redux-toolkit.
+		"import/no-unresolved": "off", // raw-loader
+		"global-require": "off", // raw-loader
+		"react/no-array-index-key": "off",
+		"react/no-unescaped-entities": "off",
+		"react/destructuring-assignment": "off",
+		"react/jsx-props-no-spreading": "off",
+		"react/state-in-constructor": "off",
+		"react/no-danger": "off",
+		"react/prop-types": "off",
+		"react/forbid-prop-types": "off",
+		"react/require-default-props": "off",
+		"react/default-props-match-prop-types": "off",
+		"react/no-unused-prop-types": "off",
+		"react/react-in-jsx-scope": "off", // after react v17
+		"react/jsx-uses-react": "off", // after react v17
+		"react/jsx-no-bind": "off",
+		"unused-imports/no-unused-imports": "warn",
+		"import/prefer-default-export": "off",
+		"@typescript-eslint/no-explicit-any": "off",
+		"react-hooks/exhaustive-deps": "off",
+		"class-methods-use-this": "off",
+		"import/order": "off"
 	}
 }

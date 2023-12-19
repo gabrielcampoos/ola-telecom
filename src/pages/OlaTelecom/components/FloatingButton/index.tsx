@@ -7,7 +7,7 @@ export default function FloatingActionButtonSize() {
 			color="success"
 			aria-label="add"
 			size="large"
-			href="https://api.whatsapp.com/send/?phone=5518997984039&text&type=phone_number&app_absent=0"
+			href="https://api.whatsapp.com/send/?phone=551832091200&text=Oi%2C+Ol%C3%A1+Telecom+%21+Eu+gostaria+de+pedir+mais+informa%C3%A7%C3%B5es&type=phone_number&app_absent=0"
 			sx={{
 				position: 'fixed',
 				zIndex: '999999999',

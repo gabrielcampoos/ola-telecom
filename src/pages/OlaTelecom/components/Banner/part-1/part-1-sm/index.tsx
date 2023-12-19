@@ -10,7 +10,6 @@ const BannerSm = () => {
 			height="600px"
 			display="flex"
 			position="relative"
-			zIndex={2}
 			sx={{
 				backgroundImage: `url(${BannerGradient})`,
 				backgroundPosition: 'center',

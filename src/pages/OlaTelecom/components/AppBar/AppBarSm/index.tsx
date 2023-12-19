@@ -74,6 +74,7 @@ const ResponsiveAppBarSm = () => {
 					flexGrow: 1,
 					width: '100%',
 					height: '10vh',
+					background: 'transparent',
 				}}
 			>
 				<AppBar
@@ -81,7 +82,6 @@ const ResponsiveAppBarSm = () => {
 						position: 'static',
 						backgroundColor: 'transparent',
 						width: '100%',
-						height: '100%',
 						justifyContent: 'center',
 						alignItems: 'center',
 					}}
@@ -90,6 +90,7 @@ const ResponsiveAppBarSm = () => {
 						sx={{
 							width: '100%',
 							height: '100%',
+							background: 'transparent',
 						}}
 					>
 						<Toolbar
@@ -99,7 +100,7 @@ const ResponsiveAppBarSm = () => {
 								display: 'flex',
 								alignItems: 'center',
 								justifyContent: 'center',
-								zIndex: '99999',
+								background: 'transparent',
 							}}
 						>
 							<Box
@@ -109,7 +110,7 @@ const ResponsiveAppBarSm = () => {
 								src="https://olanet.com.br/wp-content/uploads/2021/03/ola-telecom-logotipo-colorido-versao-02.png"
 								ml={15}
 							/>
-							<Box textAlign="end" ml={10} pt={7}>
+							<Box textAlign="end" ml={11} pt={6}>
 								<ButtonGroup
 									color="warning"
 									variant="contained"

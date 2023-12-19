@@ -11,41 +11,49 @@ import MenuList from '@mui/material/MenuList';
 import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const options = ['Home', 'Empresa', 'Contato', 'Blog'];
+const pages = ['Home', 'Empresa', 'Contato', 'Blog'];
 
 const ResponsiveAppBarSm = () => {
 	const [open, setOpen] = React.useState(false);
 	const anchorRef = React.useRef<HTMLDivElement>(null);
 	const [selectedIndex, setSelectedIndex] = React.useState(0);
 
+	const navigate = useNavigate();
+
 	const handleMenuItemClick = (
 		event: React.MouseEvent<HTMLLIElement, MouseEvent>,
 		index: number,
 	) => {
-		const Home = document.getElementById('Home');
-		const Empresa = document.getElementById('Empresa');
-		const Blog = document.getElementById('Blog');
-		const Contato = document.getElementById('Contato');
+		const Home = document.getElementById('home');
+		const Empresa = document.getElementById('empresa');
+		const Contato = document.getElementById('contato');
+		const Blog = document.getElementById('blog');
 
-		if (options[index] === 'Home') {
+		if (pages[index] === 'Home') {
+			const url = window.location.href;
+			if (url !== '/ola-telecom') {
+				navigate('/ola-telecom');
+			}
+
 			setOpen(false);
 			Home!.scrollIntoView({ behavior: 'smooth' });
 		}
 
-		if (options[index] === 'Empresa') {
+		if (pages[index] === 'Empresa') {
 			setOpen(false);
-			Empresa!.scrollIntoView({ behavior: 'smooth' });
+			navigate('/ola-telecom-empresa');
 		}
 
-		if (options[index] === 'Contato') {
-			setOpen(false);
-			Blog!.scrollIntoView({ behavior: 'smooth' });
-		}
-
-		if (options[index] === 'Blog') {
+		if (pages[index] === 'Contato') {
 			setOpen(false);
 			Contato!.scrollIntoView({ behavior: 'smooth' });
+		}
+
+		if (pages[index] === 'Blog') {
+			setOpen(false);
+			Blog!.scrollIntoView({ behavior: 'smooth' });
 		}
 
 		setSelectedIndex(index);
@@ -136,7 +144,7 @@ const ResponsiveAppBarSm = () => {
 								</ButtonGroup>
 								<Popper
 									sx={{
-										zIndex: 1,
+										zIndex: 2,
 									}}
 									open={open}
 									anchorEl={anchorRef.current}
@@ -162,7 +170,7 @@ const ResponsiveAppBarSm = () => {
 														id="split-button-menu"
 														autoFocusItem
 													>
-														{options.map(
+														{pages.map(
 															(option, index) => (
 																<MenuItem
 																	key={option}

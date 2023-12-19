@@ -4,9 +4,12 @@ import Control from '../../../../../assets/images/control.jpg';
 import Fibra from '../../../../../assets/images/fibra.jpg';
 import Password from '../../../../../assets/images/password.jpeg';
 
+import { useNavigate } from 'react-router-dom';
 import './styles.css';
 
 const BlogSm = () => {
+	const navigate = useNavigate();
+
 	return (
 		<Box
 			component="div"
@@ -77,6 +80,7 @@ const BlogSm = () => {
 						flexDirection="column"
 						mt={3}
 						mb={3}
+						onClick={() => navigate('/ola-telecom-senha-segura')}
 						sx={{
 							background: 'transparent',
 							border: 'none',
@@ -136,6 +140,7 @@ const BlogSm = () => {
 						flexDirection="column"
 						mt={3}
 						mb={3}
+						onClick={() => navigate('/ola-telecom-mito-fibra')}
 						sx={{
 							background: 'transparent',
 							border: 'none',
@@ -185,55 +190,65 @@ const BlogSm = () => {
 					justifyContent="center"
 					alignItems="center"
 				>
-					<Box
-						component="button"
-						width="562px"
-						height="400px"
-						display="flex"
-						justifyContent="center"
-						alignItems="center"
-						flexDirection="column"
-						mt={3}
-						mb={3}
-						sx={{
-							background: 'transparent',
-							border: 'none',
-							cursor: 'pointer',
+					<a
+						className="textVisible"
+						href="https://jovemnerd.com.br/nerdbunker/melhores-jogos-de-2023-segundo-a-critica/"
+						style={{
+							textDecoration: 'none',
+							color: '#fff',
+							letterSpacing: '1px',
 						}}
 					>
 						<Box
-							className="bg"
-							component="img"
+							component="button"
 							width="100%"
-							height="100%"
+							height="400px"
+							display="flex"
+							justifyContent="center"
+							alignItems="center"
+							flexDirection="column"
+							mt={3}
+							mb={3}
 							sx={{
-								background: `url(${Control})`,
-								backgroundSize: 'cover',
-								backgroundPosition: 'center',
-								backgroundRepeat: 'no-repeat',
-								borderRadius: '1rem 1rem 0 0',
-							}}
-						/>
-						<Box
-							width="100%"
-							sx={{
-								background: '#fff',
-								borderRadius: '0 0 1rem 1rem',
+								background: 'transparent',
+								border: 'none',
+								cursor: 'pointer',
 							}}
 						>
-							<Typography
-								color="#333"
-								textAlign="center"
-								padding="2rem 0"
-								letterSpacing="1px"
-								fontSize="16px"
-								fontWeight="700"
-								textTransform="uppercase"
+							<Box
+								className="bg"
+								component="img"
+								width="100%"
+								height="100%"
+								sx={{
+									background: `url(${Control})`,
+									backgroundSize: 'cover',
+									backgroundPosition: 'center',
+									backgroundRepeat: 'no-repeat',
+									borderRadius: '1rem 1rem 0 0',
+								}}
+							/>
+							<Box
+								width="100%"
+								sx={{
+									background: '#fff',
+									borderRadius: '0 0 1rem 1rem',
+								}}
 							>
-								Os melhores jogos de pc em 2023 até agora
-							</Typography>
+								<Typography
+									color="#333"
+									textAlign="center"
+									padding="2rem 0"
+									letterSpacing="1px"
+									fontSize="16px"
+									fontWeight="700"
+									textTransform="uppercase"
+								>
+									Os melhores jogos de pc em 2023 até agora
+								</Typography>
+							</Box>
 						</Box>
-					</Box>
+					</a>
 				</Grid>
 			</Grid>
 		</Box>

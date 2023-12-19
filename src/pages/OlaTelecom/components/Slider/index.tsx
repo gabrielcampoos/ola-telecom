@@ -13,11 +13,16 @@ import './styles.css';
 // import required modules
 import { Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
+import { useMediaQuery, useTheme } from '@mui/material';
 import Banner from '../Banner/part-1';
 import BannerPersona from '../Banner/part-2';
 import BannerPersonaWomam from '../Banner/part-3';
 
 export default function Slider() {
+	const theme = useTheme();
+
+	const smDown = useMediaQuery(theme.breakpoints.down('sm'));
+
 	return (
 		<>
 			<Swiper

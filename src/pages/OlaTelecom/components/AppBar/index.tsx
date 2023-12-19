@@ -18,7 +18,6 @@ import logoBranco from '../../../../assets/images/ola-telecom-logo-branco.png';
 import ResponsiveAppBarSm from './AppBarSm';
 
 const pages = ['Home', 'Empresa', 'Contato', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
 	const theme = useTheme();

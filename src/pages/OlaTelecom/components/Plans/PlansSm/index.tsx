@@ -59,8 +59,8 @@ const PlansSm = () => {
 				fontSize="1.6rem"
 				color="#fff"
 				fontWeight="700"
-				pt={8}
-				pb={1}
+				pt={2}
+				pb={2}
 			>
 				CONHEÇA NOSSOS PLANOS
 			</Typography>

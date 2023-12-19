@@ -7,7 +7,7 @@ const BannerSm = () => {
 	return (
 		<Box
 			width="100%"
-			height="600px"
+			height="400px"
 			display="flex"
 			position="relative"
 			sx={{
@@ -31,7 +31,7 @@ const BannerSm = () => {
 					justifyContent="center"
 					flexDirection="column"
 					color="#fff"
-					zIndex={4}
+					zIndex={1}
 					lineHeight="2.5rem"
 				>
 					<Typography
@@ -69,7 +69,10 @@ const BannerSm = () => {
 						>
 							<a
 								href="https://api.whatsapp.com/send?phone=551832091200&text=Oi!%20Eu%20quero%20assinar%20esse%20plano%20de%20150Mb"
-								style={{ textDecoration: 'none' }}
+								style={{
+									textDecoration: 'none',
+									color: '#fff',
+								}}
 							>
 								ASSINE JÁ!
 							</a>
@@ -79,16 +82,15 @@ const BannerSm = () => {
 
 				<Box
 					width="70%"
-					height="600px"
+					height="400px"
 					display="flex"
 					alignItems="center"
 					justifyContent="center"
-					pt={8}
 					position="relative"
 					right="2rem"
-					top="0.3rem"
+					top="2rem"
 				>
-					<img src={BannerLayer} width="100%" height="50%" />
+					<img src={BannerLayer} width="100%" height="60%" />
 				</Box>
 			</Container>
 		</Box>

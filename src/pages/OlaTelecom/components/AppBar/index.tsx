@@ -17,7 +17,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import logoBranco from '../../../../assets/images/ola-telecom-logo-branco.png';
 import ResponsiveAppBarSm from './AppBarSm';
 
-const pages = ['Home', 'Empresa', 'Contato', 'Blog'];
+const pages = ['Home', 'Empresa', 'Contato', 'Blog', 'AVISOS'];
 
 function ResponsiveAppBar() {
 	const theme = useTheme();
@@ -65,7 +65,11 @@ function ResponsiveAppBar() {
 						}}
 					>
 						<Box width="100%">
-							<Container maxWidth="lg" sx={{ float: 'left' }}>
+							<Container
+								maxWidth="xl"
+								sx={{ float: 'left' }}
+								disableGutters
+							>
 								<Toolbar
 									disableGutters
 									sx={{ position: 'relative', left: '4rem' }}
@@ -224,7 +228,7 @@ function ResponsiveAppBar() {
 													position: 'relative',
 													p: 2,
 													borderRadius: 8,
-													right: '10rem',
+													right: '23rem',
 													color: '#fff',
 													fontSize: '0.8rem',
 													background: '#0EC6E5',
@@ -259,6 +263,27 @@ function ResponsiveAppBar() {
 											pl={1}
 										>
 											(18) 3209-1200
+										</Typography>
+									</Box>
+									<Box
+										component="button"
+										display="flex"
+										alignItems="center"
+										onClick={() =>
+											navigate('/ola-telecom-avisos')
+										}
+										sx={{
+											background: 'transparent',
+											border: 'none',
+											cursor: 'pointer',
+										}}
+									>
+										<Typography
+											fontWeight="700"
+											fontSize="1.5rem"
+											color="red"
+										>
+											AVISOS
 										</Typography>
 									</Box>
 								</Toolbar>

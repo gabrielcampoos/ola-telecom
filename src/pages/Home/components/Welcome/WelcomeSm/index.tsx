@@ -1,9 +1,13 @@
 import { Button, Grid, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
+import { useState } from 'react';
 import Logo from '../../../../../assets/images/ola-telecom-logo.png';
+import { BasicSelect } from '../Select';
 
 const WelcomeSm = () => {
+	const [area, setArea] = useState('');
+
 	const navigate = useNavigate();
 
 	return (
@@ -54,12 +58,14 @@ const WelcomeSm = () => {
 			</Grid>
 
 			<Grid xs={2} sm={4} md={4} pt="3rem">
+				<BasicSelect area={area} setArea={setArea} />
 				<Button
 					sx={{
 						transition: 'ease-in-out 0.5s',
 						background: 'rgba(255, 110, 0, 1)',
 						color: '#fff',
-						padding: '8px',
+						padding: '8px 37px 8px 37px',
+						mt: 3,
 						'&:hover': {
 							background: '#fff',
 							color: 'rgba(255, 110, 0, 1)',

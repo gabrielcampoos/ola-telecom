@@ -46,7 +46,6 @@ export default function FormDialog({
 
 	const handleSubmit = (ev: React.FormEvent<HTMLFormElement>) => {
 		ev.preventDefault();
-		console.log('oi');
 
 		if (!username || !senha) {
 			dispatch(
@@ -68,7 +67,7 @@ export default function FormDialog({
 
 	return (
 		<React.Fragment>
-			<Box component="form" onSubmit={(ev) => handleSubmit(ev)}>
+			<Box component="form" onSubmit={handleSubmit}>
 				<Dialog open={open} onClose={handleClose}>
 					<DialogTitle>Login</DialogTitle>
 					<DialogContent>

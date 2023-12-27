@@ -19,7 +19,7 @@
 			"../../../../node_modules/@types",
 			"../../../../types",
 			"./node_modules/@types",
-			"./src/types"
+			"src/store/types"
 		]
 	},
 	"include": ["src", "./src/index.d.ts", "src/components", "custom.d.ts"],

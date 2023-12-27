@@ -3,12 +3,22 @@ import { useNavigate } from 'react-router-dom';
 
 import { useState } from 'react';
 import Logo from '../../../../assets/images/ola-telecom-logo.png';
+import FormDialog from './ModalSignIn';
 import { BasicSelect } from './Select';
 
 const Welcome = () => {
 	const [area, setArea] = useState('');
+	const [open, setOpen] = useState(false);
+	const [username, setUsername] = useState('');
+	const [senha, setSenha] = useState('');
 
 	const navigate = useNavigate();
+
+	const handleSelect = () => {
+		const getArea = area;
+
+		getArea === 'Suporte' ? setOpen(true) : open;
+	};
 
 	return (
 		<Grid
@@ -72,11 +82,19 @@ const Welcome = () => {
 							fontWeight: '700',
 						},
 					}}
-					onClick={() => navigate('/ola-telecom')}
+					onClick={handleSelect}
 				>
 					Entrar
 				</Button>
 			</Grid>
+			<FormDialog
+				open={open}
+				setOpen={setOpen}
+				username={username}
+				setUsername={setUsername}
+				senha={senha}
+				setSenha={setSenha}
+			/>
 		</Grid>
 	);
 };
